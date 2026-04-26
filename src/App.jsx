@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Tabs from './components/Tabs'
 import WorkoutForm from './components/WorkoutForm'
 import WorkoutHistory from './components/WorkoutHistory'
+import './index.css'
 
 function App() {
   const [workouts, setWorkouts] = useState([])
@@ -24,7 +25,8 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Fitness Tracker</h1>
+      <h1>Fitness <span>Tracker</span></h1>
+      <p className="subtitle">Track your gains. Every rep counts.</p>
       <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
       {activeTab === 'log' && <WorkoutForm onAdd={handleAdd} />}
       {activeTab === 'history' && <WorkoutHistory workouts={workouts} onDelete={handleDelete} />}
