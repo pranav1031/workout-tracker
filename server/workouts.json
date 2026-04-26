@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1777204596110,
+    "date": "2026-04-26",
+    "bodyPart": "Back",
+    "exercise": "Pull Ups",
+    "sets": "3",
+    "reps": "10",
+    "weight": "10"
+  },
+  {
+    "id": 1777204615944,
+    "date": "2026-04-26",
+    "bodyPart": "Shoulders",
+    "exercise": "Overhead Press",
+    "sets": "4",
+    "reps": "12",
+    "weight": "20"
+  }
+]
