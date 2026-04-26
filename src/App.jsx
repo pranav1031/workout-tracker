@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Tabs from './components/Tabs'
+import WorkoutForm from './components/WorkoutForm'
 
 function App() {
   const [workouts, setWorkouts] = useState([])
@@ -11,10 +12,15 @@ function App() {
       .then(data => setWorkouts(data))
   }, [])
 
+  function handleAdd(saved) {
+    setWorkouts([...workouts, saved])
+  }
+
   return (
     <div className="app">
-      <h1>Fitness Tracker</h1>
+      <h1>Workout Tracker</h1>
       <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
+      {activeTab === 'log' && <WorkoutForm onAdd={handleAdd} />}
     </div>
   )
 }
